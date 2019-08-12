@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "160433711387",
+    "firebase_url": "https://study-ground.firebaseio.com",
+    "project_id": "study-ground",
+    "storage_bucket": "study-ground.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160433711387:android:bf970d2a02e93c35",
+        "android_client_info": {
+          "package_name": "com.futureapp.studyground"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160433711387-c9dsaed68urvof0g0k7hvjgtd2i547ii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.futureapp.studyground",
+            "certificate_hash": "e321c95fdcbf36bae11ce2cc12af81c2e8927f35"
+          }
+        },
+        {
+          "client_id": "160433711387-b193ad09leqsi7told6fn18uk68jbmos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-RMOdOB0j9A_w8cL_YggbG0o_Iw0KlvA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160433711387-b193ad09leqsi7told6fn18uk68jbmos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
