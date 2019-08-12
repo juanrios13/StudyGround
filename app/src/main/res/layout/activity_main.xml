@@ -12,6 +12,7 @@
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="25dp"
         android:background="#00FFFFFF"
         app:srcCompat="@drawable/logo" />
 
@@ -19,7 +20,9 @@
         android:id="@+id/StudyGround"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="StudyGround"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="48sp" />
 
