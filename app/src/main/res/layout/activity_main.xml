@@ -8,20 +8,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <WebView
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
-    </WebView>
+    <TextView
+        android:id="@+id/StudyGround"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="StudyGround"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp" />
 </LinearLayout>
