@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="#1CB9A9"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -12,6 +12,7 @@
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
         app:srcCompat="@drawable/logo" />
 
     <TextView
@@ -21,4 +22,5 @@
         android:text="StudyGround"
         android:textColor="#FFFFFF"
         android:textSize="48sp" />
+
 </LinearLayout>
