@@ -2,7 +2,9 @@ package com.futureapp.studyground;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -11,13 +13,24 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final int DURACION_SPLASH = 3000; // 3 segundos
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Tenemos una plantilla llamada splash.xml donde mostraremos la información que queramos (logotipo, etc.)
         setContentView(R.layout.activity_main);
 
-        TextView boton = (TextView) findViewById(R.id.StudyGround);
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+                // Cuando pasen los 3 segundos, pasamos a la actividad principal de la aplicación
+                Intent intent = new Intent(MainActivity.this, Login.class);
+                startActivity(intent);
+                finish();
+            }
 
-        boton.setText("ccc");
+            ;
+        }, DURACION_SPLASH);
     }
 }
