@@ -24,4 +24,17 @@
         <item>Biomedica</item>
     </string-array>
 
+    <string-array name="universida">
+        <item>EIA</item>
+        <item>Eafit</item>
+        <item>Udea</item>
+    </string-array>
+
+    <string-array name="materia">
+        <item>Calculo</item>
+        <item>Quimica</item>
+        <item>Programacion</item>
+
+    </string-array>
+
 </resources>
