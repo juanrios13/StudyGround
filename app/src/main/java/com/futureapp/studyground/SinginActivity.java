@@ -15,8 +15,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -24,18 +26,24 @@ import java.util.Map;
 
 public class SinginActivity extends AppCompatActivity {
 
-    private EditText editText;
-    private EditText editText2;
-    private EditText editText3;
-    private Button button;
+    private EditText txtemail;
+    private EditText txtpwd;
+    private EditText txtcPwd;
+    private EditText txtname;
+    private Button buttonRegistro;
+    private Button buttonReturn;
+    private Spinner spinPrograma;
+    private Spinner spinUniversidad;
+    private Spinner spinMaterias;
 
     //Datos a registrar
     private String name = "";
     private String email = "";
     private String pwd = "";
+    private String cpwd = "";
     private String univ = "";
     private String[] materias = new String[10];
-    private String carrera = "";
+    private String programa = "";
 
     // Variables firebase
     FirebaseAuth auth;
@@ -52,21 +60,44 @@ public class SinginActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance().getReference();
 
-        editText = (EditText) findViewById(R.id.editText);
-        editText2 = (EditText) findViewById(R.id.editText2);
-        editText3 = (EditText) findViewById(R.id.editText3);
-        button = (Button) findViewById(R.id.button);
+        txtemail = (EditText) findViewById(R.id.txtemail);
+        txtpwd = (EditText) findViewById(R.id.txtpwd);
+        txtcPwd = (EditText) findViewById(R.id.txtcPwd);
+        txtname = (EditText) findViewById(R.id.txtname);
+        buttonRegistro = (Button) findViewById(R.id.buttonRegistro);
+        buttonReturn = (Button) findViewById(R.id.buttonReturn);
+        spinUniversidad = (Spinner) findViewById(R.id.spinuniversidad);
+        spinPrograma = (Spinner) findViewById(R.id.spinprograma);
+        spinMaterias = (Spinner) findViewById(R.id.spinmaterias);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        spinPrograma.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                programa = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        buttonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                name = editText.getText().toString();
-                email = editText2.getText().toString();
-                pwd = editText3.getText().toString();
+                email = txtemail.getText().toString();
+                pwd = txtpwd.getText().toString();
+                cpwd = txtcPwd.getText().toString();
+                name = txtname.getText().toString();
 
-                if (!name.isEmpty() && !email.isEmpty() && !pwd.isEmpty()) {
+                if (!name.isEmpty() && !email.isEmpty() && !pwd.isEmpty() && !cpwd.isEmpty() && !programa.isEmpty()) {
                     if (pwd.length() >= 6) {
-                        registerUser();
+                        if (pwd.equals(cpwd)) {
+                            registerUser();
+                        } else {
+                            Toast.makeText(SinginActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                        }
+
                     } else {
                         Toast.makeText(SinginActivity.this, "La contraseña debe contener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
                     }
@@ -90,6 +121,7 @@ public class SinginActivity extends AppCompatActivity {
                     map.put("name", name);
                     map.put("email", email);
                     map.put("pwd", pwd);
+                    map.put("programa", programa);
 
                     String id = auth.getCurrentUser().getUid();
 
@@ -97,6 +129,7 @@ public class SinginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if (task2.isSuccessful()) {
+                                Toast.makeText(SinginActivity.this, "Datos subidos correctamente", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(SinginActivity.this, ProfileMainActivity.class));
                                 finish();
                             } else {

@@ -13,8 +13,5 @@ public class ProfileMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile_main);
 
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
-
     }
 }

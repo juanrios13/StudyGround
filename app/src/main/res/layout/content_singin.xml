@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_singin">
 
     <TextView
-        android:id="@+id/title4"
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#009688"
@@ -21,7 +21,7 @@
         android:textSize="48sp" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="171dp"
         android:background="#009688"
@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/logocarga" />
 
     <TextView
-        android:id="@+id/title3"
+        android:id="@+id/subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -41,7 +41,7 @@
         android:textSize="30sp" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/txtemail"
         android:layout_width="342dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -52,7 +52,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/txtpwd"
         android:layout_width="343dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -63,7 +63,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/txtcPwd"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -74,7 +74,7 @@
         android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/txtname"
         android:layout_width="344dp"
         android:layout_height="38dp"
         android:layout_marginLeft="30dp"
@@ -84,25 +84,21 @@
         android:inputType="textPersonName"
         android:textSize="14sp" />
 
-    <EditText
-        android:id="@+id/editText11"
-        android:layout_width="344dp"
-        android:layout_height="39dp"
+    <Spinner
+        android:id="@+id/spinuniversidad"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
         android:layout_marginLeft="30dp"
-        android:ems="10"
-        android:fontFamily="@font/medium"
-        android:hint="Universidad"
-        android:inputType="textPersonName"
-        android:textSize="14sp" />
+        android:entries="@array/programa" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinprograma"
         android:layout_width="344dp"
         android:layout_height="27dp"
         android:layout_marginLeft="30dp" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinmaterias"
         android:layout_width="344dp"
         android:layout_height="27dp"
         android:layout_marginLeft="30dp"
@@ -117,7 +113,7 @@
         android:text="Acepto los Términos y Condiciones" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonRegistro"
         android:layout_width="236dp"
         android:layout_height="41dp"
         android:layout_marginLeft="85dp"
@@ -127,7 +123,7 @@
         android:textColor="#FCFFFFFF" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/buttonReturn"
         android:layout_width="204dp"
         android:layout_height="25dp"
         android:layout_marginLeft="100dp"
