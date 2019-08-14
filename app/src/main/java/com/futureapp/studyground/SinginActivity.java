@@ -82,6 +82,18 @@ public class SinginActivity extends AppCompatActivity {
             }
         });
 
+        spinUniversidad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                univ = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         buttonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,7 +102,7 @@ public class SinginActivity extends AppCompatActivity {
                 cpwd = txtcPwd.getText().toString();
                 name = txtname.getText().toString();
 
-                if (!name.isEmpty() && !email.isEmpty() && !pwd.isEmpty() && !cpwd.isEmpty() && !programa.isEmpty()) {
+                if (!name.isEmpty() && !email.isEmpty() && !pwd.isEmpty() && !cpwd.isEmpty() && !programa.isEmpty() && !univ.isEmpty()) {
                     if (pwd.length() >= 6) {
                         if (pwd.equals(cpwd)) {
                             registerUser();
@@ -122,6 +134,7 @@ public class SinginActivity extends AppCompatActivity {
                     map.put("email", email);
                     map.put("pwd", pwd);
                     map.put("programa", programa);
+                    map.put("universidad", univ);
 
                     String id = auth.getCurrentUser().getUid();
 
