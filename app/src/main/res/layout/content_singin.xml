@@ -9,31 +9,130 @@
     tools:context=".SinginActivity"
     tools:showIn="@layout/activity_singin">
 
-    <EditText
-        android:id="@+id/editText"
+    <TextView
+        android:id="@+id/title4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#009688"
+        android:fontFamily="@font/raleway_extrabold_italic"
+        android:text="StudyGround"
+        android:textAlignment="center"
+        android:textColor="#F5F8F8"
+        android:textSize="48sp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:background="#009688"
+        android:paddingBottom="10dp"
+        app:srcCompat="@drawable/logocarga" />
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/medium"
+        android:text="Registro"
+        android:textAlignment="gravity"
+        android:textColor="#009688"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
         android:ems="10"
+        android:fontFamily="@font/medium"
+        android:hint="Correo Electrónico"
+        android:inputType="textEmailAddress"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:ems="10"
+        android:fontFamily="@font/medium"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:ems="10"
+        android:fontFamily="@font/medium"
+        android:hint="Repetir contraseña"
+        android:inputType="textPassword"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="344dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="30dp"
+        android:ems="10"
+        android:fontFamily="@font/medium"
+        android:hint="Nombre completo"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/editText11"
+        android:layout_width="344dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="30dp"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:fontFamily="@font/medium"
+        android:hint="Universidad"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword" />
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="344dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="30dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="344dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="30dp"
+        android:spinnerMode="dropdown" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:text="Acepto los Términos y Condiciones" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:id="@+id/button7"
+        android:layout_width="236dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#009688"
+        android:text="Registrarme"
+        android:textColor="#FCFFFFFF" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="204dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:text="Ya tengo una cuenta" />
+
 </LinearLayout>
