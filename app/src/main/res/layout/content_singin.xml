@@ -89,14 +89,14 @@
         android:layout_width="match_parent"
         android:layout_height="27dp"
         android:layout_marginLeft="30dp"
-        android:entries="@array/programa" />
+        android:entries="@array/universida" />
 
     <Spinner
         android:id="@+id/spinprograma"
         android:layout_width="344dp"
         android:layout_height="27dp"
         android:layout_marginLeft="30dp"
-        android:entries="@array/universida" />
+        android:entries="@array/programa" />
 
     <Spinner
         android:id="@+id/spinmaterias"
