@@ -103,16 +103,7 @@
         android:layout_width="344dp"
         android:layout_height="27dp"
         android:layout_marginLeft="30dp"
-        android:entries="@array/materias"
         android:spinnerMode="dropdown" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="5dp"
-        android:text="Acepto los Términos y Condiciones" />
 
     <Button
         android:id="@+id/buttonRegistro"

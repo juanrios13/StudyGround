@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,8 +31,8 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth auth;
     DatabaseReference db;
 
-    private String email = "";
-    private String pwd = "";
+    private String email = "v";
+    private String pwd = "v";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance().getReference();
+
 
         txtemail = (EditText) findViewById(R.id.email);
         txtpwd = (EditText) findViewById(R.id.pwd);

@@ -1,6 +1,8 @@
 package com.futureapp.studyground;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -14,15 +16,24 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 public class SinginActivity extends AppCompatActivity {
 
@@ -42,7 +53,8 @@ public class SinginActivity extends AppCompatActivity {
     private String pwd = "";
     private String cpwd = "";
     private String univ = "";
-    private String[] materias = new String[10];
+    // private String[] materias = new String[10];
+    private String materia = "";
     private String programa = "";
 
     // Variables firebase
@@ -55,6 +67,14 @@ public class SinginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_singin);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Resources res = getResources();
+        String[] materias = res.getStringArray(R.array.mCienciasBasicas);
+
+        //Cargar archivo xml
+
+
+        //-------------------------------------------------------------------------------------------
 
         //instacia firebase auth
         auth = FirebaseAuth.getInstance();
@@ -70,10 +90,17 @@ public class SinginActivity extends AppCompatActivity {
         spinPrograma = (Spinner) findViewById(R.id.spinprograma);
         spinMaterias = (Spinner) findViewById(R.id.spinmaterias);
 
+
+        spinMaterias.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, materias));
+
+
+        //Usar array de arrays
+
+
         spinPrograma.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                // programa = adapterView.getItemAtPosition(i).toString();
+                programa = adapterView.getItemAtPosition(i).toString();
             }
 
             @Override
@@ -85,7 +112,7 @@ public class SinginActivity extends AppCompatActivity {
         spinUniversidad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                // univ = adapterView.getItemAtPosition(i).toString();
+                univ = adapterView.getItemAtPosition(i).toString();
             }
 
             @Override
@@ -93,6 +120,19 @@ public class SinginActivity extends AppCompatActivity {
 
             }
         });
+
+        spinMaterias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                materia = adapterView.getItemAtPosition(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
 
         buttonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override

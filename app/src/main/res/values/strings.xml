@@ -47,9 +47,5 @@
         <item>Arquitectura de hardware</item>
     </string-array>
 
-    <array name="materias">
-        <item>@array/mCienciasBasicas</item>
-        <item>@array/mSistemas</item>
-    </array>
 
 </resources>
