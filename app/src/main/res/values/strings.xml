@@ -11,30 +11,45 @@
     <string name="login_failed">"Login failed"</string>
 
     <string-array name="programa">
-        <item>Sistemas</item>
-        <item>Civil</item>
-        <item>Administrativa</item>
-        <item>Financiera</item>
+        <item>Ingeniería de Sistemas</item>
+        <item>Ingeniería Civil</item>
+        <item>Ingeniería Administrativa</item>
+        <item>Ingeniería Financiera</item>
         <item>Fisica</item>
         <item>Medicina</item>
-        <item>Geologica</item>
-        <item>Biomedica</item>
-        <item>Mecanica</item>
-        <item>Mecatronica</item>
-        <item>Biomedica</item>
+        <item>Ingeniería Geologica</item>
+        <item>Ingeniería Industrial</item>
+        <item>Ingeniería Mecanica</item>
+        <item>Ingeniería Mecatronica</item>
+        <item>Ingeniería Biomedica</item>
+        <item>Ingeniería Ambiental</item>
+
     </string-array>
 
-    <string-array name="universida">
+    <string-array name="universidad">
         <item>EIA</item>
-        <item>Eafit</item>
-        <item>Udea</item>
     </string-array>
 
-    <string-array name="materia">
-        <item>Calculo</item>
-        <item>Quimica</item>
-        <item>Programacion</item>
-
+    <string-array name="mCienciasBasicas">
+        <item>Calculo diferencial</item>
+        <item>Calculo integral</item>
+        <item>Calculo multivariable</item>
+        <item>Quimica inorganica</item>
+        <item>Fundamentos de programación</item>
+        <item>Fisica mecanica</item>
+        <item>Fisica de campos</item>
+        <item>Fisica de ondas</item>
     </string-array>
+
+    <string-array name="mSistemas">
+        <item>Estructuras de datos</item>
+        <item>Sistemas discretos</item>
+        <item>Arquitectura de hardware</item>
+    </string-array>
+
+    <array name="materias">
+        <item>@array/mCienciasBasicas</item>
+        <item>@array/mSistemas</item>
+    </array>
 
 </resources>
