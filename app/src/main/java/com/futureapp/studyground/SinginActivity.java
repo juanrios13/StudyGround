@@ -73,7 +73,7 @@ public class SinginActivity extends AppCompatActivity {
         spinPrograma.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                programa = adapterView.getItemAtPosition(i).toString();
+                // programa = adapterView.getItemAtPosition(i).toString();
             }
 
             @Override
@@ -85,7 +85,7 @@ public class SinginActivity extends AppCompatActivity {
         spinUniversidad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                univ = adapterView.getItemAtPosition(i).toString();
+                // univ = adapterView.getItemAtPosition(i).toString();
             }
 
             @Override
@@ -119,6 +119,16 @@ public class SinginActivity extends AppCompatActivity {
 
             }
         });
+
+        buttonReturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SinginActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
     private void registerUser() {
