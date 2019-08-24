@@ -46,6 +46,7 @@
         <item>Sistemas discretos</item>
         <item>Arquitectura de hardware</item>
     </string-array>
+    <string name="title_activity_study">StudyActivity</string>
 
 
 </resources>
