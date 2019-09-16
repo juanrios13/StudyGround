@@ -16,7 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -25,15 +24,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-
-import java.io.FileInputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 public class SinginActivity extends AppCompatActivity {
 
@@ -45,7 +40,7 @@ public class SinginActivity extends AppCompatActivity {
     private Button buttonReturn;
     private Spinner spinPrograma;
     private Spinner spinUniversidad;
-    private Spinner spinMaterias;
+    private Button buttonMaterias;
 
     //Datos a registrar
     private String name = "";
@@ -53,8 +48,6 @@ public class SinginActivity extends AppCompatActivity {
     private String pwd = "";
     private String cpwd = "";
     private String univ = "";
-    // private String[] materias = new String[10];
-    private String materia = "";
     private String programa = "";
 
     // Variables firebase
@@ -69,7 +62,8 @@ public class SinginActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Resources res = getResources();
-        String[] materias = res.getStringArray(R.array.mCienciasBasicas);
+
+
 
         //Cargar archivo xml
 
@@ -77,7 +71,7 @@ public class SinginActivity extends AppCompatActivity {
         //-------------------------------------------------------------------------------------------
 
         //instacia firebase auth
-        auth = FirebaseAuth.getInstance();
+       auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance().getReference();
 
         txtemail = (EditText) findViewById(R.id.txtemail);
@@ -88,13 +82,11 @@ public class SinginActivity extends AppCompatActivity {
         buttonReturn = (Button) findViewById(R.id.buttonReturn);
         spinUniversidad = (Spinner) findViewById(R.id.spinuniversidad);
         spinPrograma = (Spinner) findViewById(R.id.spinprograma);
-        spinMaterias = (Spinner) findViewById(R.id.spinmaterias);
+        buttonMaterias = (Button) findViewById(R.id.buttonMaterias);
 
 
-        spinMaterias.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, materias));
 
 
-        //Usar array de arrays
 
 
         spinPrograma.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -121,17 +113,41 @@ public class SinginActivity extends AppCompatActivity {
             }
         });
 
-        spinMaterias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                materia = adapterView.getItemAtPosition(i).toString();
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
 
-            }
-        });
+
+      final String[] materias = res.getStringArray(R.array.mCienciasBasicas);
+
+      buttonMaterias.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              if(!programa.isEmpty()){
+                  System.out.println("Programa btn"+programa);
+                  String[] materiasp=EleccionPrograma(programa);
+
+
+                  List allMaterias=new ArrayList();
+
+
+                  for (int i=0;i<materias.length;i++){
+                      allMaterias.add(materias[i]);
+                  }
+
+
+                  for (int i=0;i<materiasp.length;i++){
+                      allMaterias.add(materiasp[i]);
+                      System.out.println(i+" progra:" +materiasp[i]);
+                  }
+
+                  for (int i=0;i<allMaterias.size();i++){
+                      System.out.println(i+"programa materias cb:"+allMaterias.get(i).toString());
+                  }
+
+              }
+          }
+      });
+
+
 
 
         buttonRegistro.setOnClickListener(new View.OnClickListener() {
@@ -207,5 +223,47 @@ public class SinginActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private String[] EleccionPrograma(String programa){
+        Resources res=getResources();
+
+        String[] materiasp=new String[35];
+        switch (programa){
+            case "Ingeniería de Sistemas":
+                materiasp=res.getStringArray(R.array.mSistemas);
+                break;
+            case "Ingeniería Civil":
+                materiasp=res.getStringArray(R.array.mCivil);
+                break;
+            case "Ingeniería Administrativa":
+                materiasp=res.getStringArray(R.array.mAdministrativa);
+                break;
+            case "Ingeniería Financiera":
+                materiasp=res.getStringArray(R.array.mFinanciera);
+                break;
+            case "Ingeniería Geologica":
+                materiasp=res.getStringArray(R.array.mGeologica);
+                break;
+            case "Ingeniería Industrial":
+                materiasp=res.getStringArray(R.array.mIndustrial);
+                break;
+            case "Ingeniería Mecanica":
+                materiasp=res.getStringArray(R.array.mMecanica);
+                break;
+            case "Ingeniería Mecatronica":
+                materiasp=res.getStringArray(R.array.mMecatronica);
+                break;
+            case "Ingeniería Biomedica":
+                materiasp=res.getStringArray(R.array.mBiomedica);
+                break;
+            case "Ingeniería Ambiental":
+                materiasp=res.getStringArray(R.array.mAmbiental);
+                break;
+            case "Fisica":
+                materiasp=res.getStringArray(R.array.mSistemas);
+                break;
+        }
+        return materiasp;
     }
 }

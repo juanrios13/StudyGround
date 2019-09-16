@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     private ImageButton logGoogle;
     private Button singin;
 
-    FirebaseAuth auth;
+   FirebaseAuth auth;
     DatabaseReference db;
 
     private String email = "";
@@ -73,10 +73,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
-        Intent intent = new Intent(LoginActivity.this, SinginActivity.class);
-        startActivity(intent);
-        finish();
     }
 
     private void readUser() {

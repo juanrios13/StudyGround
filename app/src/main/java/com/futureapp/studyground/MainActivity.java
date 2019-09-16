@@ -3,8 +3,6 @@ package com.futureapp.studyground;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.os.Handler;
 

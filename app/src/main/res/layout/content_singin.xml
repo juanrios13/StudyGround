@@ -98,12 +98,15 @@
         android:layout_marginLeft="30dp"
         android:entries="@array/programa" />
 
-    <Spinner
-        android:id="@+id/spinmaterias"
-        android:layout_width="344dp"
-        android:layout_height="27dp"
-        android:layout_marginLeft="30dp"
-        android:spinnerMode="dropdown" />
+    <Button
+        android:id="@+id/buttonMaterias"
+        android:layout_width="236dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#009688"
+        android:text="Eleccion materias"
+        android:textColor="#FCFFFFFF" />
 
     <Button
         android:id="@+id/buttonRegistro"
