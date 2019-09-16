@@ -109,16 +109,6 @@
         android:textColor="#FCFFFFFF" />
 
     <Button
-        android:id="@+id/buttonRegistro"
-        android:layout_width="236dp"
-        android:layout_height="41dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="5dp"
-        android:backgroundTint="#009688"
-        android:text="Registrarme"
-        android:textColor="#FCFFFFFF" />
-
-    <Button
         android:id="@+id/buttonReturn"
         android:layout_width="204dp"
         android:layout_height="25dp"

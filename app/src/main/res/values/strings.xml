@@ -292,30 +292,30 @@
 
 
     <string-array name="mSistemas">
-        Bases de Datos Empresariales
-        Bases de Datos
-        Inteligencia Artificial
-        Programación
-        Análisis de Decisiones
-        Inteligencia de Negocios
-        Sistemas Inteligentes
-        Lenguajes y Compiladores
-        Estructuras de Datos
-        Computación Gráfica
-        Computación Científica
-        Arquitectura de Hardware
-        Implementación e Integración de Software
-        Requisitos y Modelos
-        Sistemas Operativos
-        Diseño de Redes
-        Administración de Redes
-        Seguridad de la información
-        Análisis y Diseño de Software
-        Sistemas Discretos
-        Ingeniería Web
-        Computación Distribuida y en la nube
-        Ciberseguridad y Ciberdefensa
-        Optativa SC
+        <item>Bases de Datos Empresariales</item>
+        <item>Bases de Datos</item>
+        <item>Inteligencia Artificial</item>
+        <item>Programación</item>
+        <item>Análisis de Decisiones</item>
+        <item>Inteligencia de Negocios</item>
+        <item>Sistemas Inteligentes</item>
+        <item>Lenguajes y Compiladores</item>
+        <item>Estructuras de Datos</item>
+        <item>Computación Gráfica</item>
+        <item>Computación Científica</item>
+        <item>Arquitectura de Hardware</item>
+        <item>Implementación e Integración de Software</item>
+        <item>Requisitos y Modelos</item>
+        <item>Sistemas Operativos</item>
+        <item>Diseño de Redes</item>
+        <item>Administración de Redes</item>
+        <item>Seguridad de la información</item>
+        <item>Análisis y Diseño de Software</item>
+        <item>Sistemas Discretos</item>
+        <item>Ingeniería Web</item>
+        <item>Computación Distribuida y en la nube</item>
+        <item>Ciberseguridad y Ciberdefensa</item>
+        <item>Optativa SC</item>
 
     </string-array>
 

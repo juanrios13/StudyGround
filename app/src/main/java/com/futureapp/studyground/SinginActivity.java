@@ -37,7 +37,6 @@ public class SinginActivity extends AppCompatActivity {
     private EditText txtpwd;
     private EditText txtcPwd;
     private EditText txtname;
-    private Button buttonRegistro;
     private Button buttonReturn;
     private Spinner spinPrograma;
     private Spinner spinUniversidad;
@@ -79,7 +78,7 @@ public class SinginActivity extends AppCompatActivity {
         txtpwd = (EditText) findViewById(R.id.txtpwd);
         txtcPwd = (EditText) findViewById(R.id.txtcPwd);
         txtname = (EditText) findViewById(R.id.txtname);
-        buttonRegistro = (Button) findViewById(R.id.buttonRegistro);
+
         buttonReturn = (Button) findViewById(R.id.buttonReturn);
         spinUniversidad = (Spinner) findViewById(R.id.spinuniversidad);
         spinPrograma = (Spinner) findViewById(R.id.spinprograma);
@@ -144,9 +143,40 @@ public class SinginActivity extends AppCompatActivity {
                       System.out.println(i+"programa materias cb:"+allMaterias.get(i).toString());
                   }
 
+
+                  //Datos para registro
+                  email = txtemail.getText().toString();
+                  pwd = txtpwd.getText().toString();
+                  cpwd = txtcPwd.getText().toString();
+                  name = txtname.getText().toString();
+
+
+
+
                   Intent intent = new Intent(SinginActivity.this, ElectMateriasActivity.class);
-                  intent.putStringArrayListExtra("materias", allMaterias);
-                  startActivity(intent);
+
+
+
+                  if (!name.isEmpty() && !email.isEmpty() && !pwd.isEmpty() && !cpwd.isEmpty() && !programa.isEmpty() && !univ.isEmpty()) {
+                      if (pwd.length() >= 6) {
+                          if (pwd.equals(cpwd)) {
+                              intent.putStringArrayListExtra("materias", allMaterias);
+                              intent.putExtra("email",email);
+                              intent.putExtra("pwd",pwd);
+                              intent.putExtra("name",name);
+                              intent.putExtra("programa",programa);
+                              intent.putExtra("universidad",univ);
+                              startActivity(intent);
+                          } else {
+                              Toast.makeText(SinginActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                          }
+
+                      } else {
+                          Toast.makeText(SinginActivity.this, "La contraseña debe contener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
+                      }
+                  } else {
+                      Toast.makeText(SinginActivity.this, "Debes completar los campos", Toast.LENGTH_SHORT).show();
+                  }
 
               }
           }
@@ -154,32 +184,6 @@ public class SinginActivity extends AppCompatActivity {
 
 
 
-
-        buttonRegistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                email = txtemail.getText().toString();
-                pwd = txtpwd.getText().toString();
-                cpwd = txtcPwd.getText().toString();
-                name = txtname.getText().toString();
-
-                if (!name.isEmpty() && !email.isEmpty() && !pwd.isEmpty() && !cpwd.isEmpty() && !programa.isEmpty() && !univ.isEmpty()) {
-                    if (pwd.length() >= 6) {
-                        if (pwd.equals(cpwd)) {
-                            registerUser();
-                        } else {
-                            Toast.makeText(SinginActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
-                        }
-
-                    } else {
-                        Toast.makeText(SinginActivity.this, "La contraseña debe contener al menos 6 caracteres", Toast.LENGTH_SHORT).show();
-                    }
-                } else {
-                    Toast.makeText(SinginActivity.this, "Debes completar los campos", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
 
         buttonReturn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,43 +196,7 @@ public class SinginActivity extends AppCompatActivity {
 
     }
 
-    private void registerUser() {
-        auth.createUserWithEmailAndPassword(email, pwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
 
-
-                    //Lista con valores para add to firebase
-                    Map<String, Object> map = new HashMap<>();
-                    map.put("name", name);
-                    map.put("email", email);
-                    map.put("pwd", pwd);
-                    map.put("programa", programa);
-                    map.put("universidad", univ);
-
-                    String id = auth.getCurrentUser().getUid();
-
-                    db.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task2) {
-                            if (task2.isSuccessful()) {
-                                Toast.makeText(SinginActivity.this, "Datos subidos correctamente", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(SinginActivity.this, ProfileMainActivity.class));
-                                finish();
-                            } else {
-                                Toast.makeText(SinginActivity.this, "No se pudieron crear los datos correctamente", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-
-                } else {
-                    Toast.makeText(SinginActivity.this, "No se pudo registrar este usuario", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
-    }
 
     private String[] EleccionPrograma(String programa){
         Resources res=getResources();
