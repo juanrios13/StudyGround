@@ -31,21 +31,295 @@
     </string-array>
 
     <string-array name="mCienciasBasicas">
-        <item>Calculo diferencial</item>
-        <item>Calculo integral</item>
-        <item>Calculo multivariable</item>
-        <item>Quimica inorganica</item>
-        <item>Fundamentos de programación</item>
-        <item>Fisica mecanica</item>
-        <item>Fisica de campos</item>
-        <item>Fisica de ondas</item>
+
+        <item>Metodología de la Investigación</item>
+        <item>Seminario de Trabajo de Grado </item>
+        <item>SPE</item>
+        <item>Prepación SPE</item>
+        <item>Trabajo de Grado I</item>
+        <item>Trabajo de Grado II</item>
+        <item>Proyecto de Ingeniería I</item>
+        <item>Proyecto de Ingeniería II</item>
+        <item>Proyecto de Ingeniería III</item>
+        <item>Proyecto de Ingeniería IV</item>
+        <item>Comunicación y Ciencia</item>
+        <item>Hombre, Cultura y Sociedad</item>
+        <item>Ética   y Responsabilidad Social</item>
+        <item>Legislación General</item>
+        <item>Geopolítica</item>
+        <item>Legislación Comercial y Tributaria</item>
+        <item>Legislación Comercial y Laboral</item>
+        <item>Legislación Financiera y Tributaria</item>
+        <item>Participación comunitaria</item>
+        <item>Ética y laboratorio social</item>
+        <item>Legislación Informática</item>
+        <item>Legislación I. Civil</item>
+        <item>Legislación Minera</item>
+        <item>Álgebra Lineal</item>
+        <item>Cálculo Diferencial</item>
+        <item>Cálculo Integral</item>
+        <item>Cálculo en Varias Variables</item>
+        <item>Ecuaciones Diferenciales</item>
+        <item>Geometría</item>
+        <item>Análisis Numérico</item>
+        <item>Matemáticas Especiales</item>
+        <item>Métodos Cuantitativos</item>
+        <item>Probabilidad y Estadística</item>
+        <item>Pronósticos</item>
+        <item>Química General e Inorgánica</item>
+        <item>Química Ambiental</item>
+        <item>Bioquímica</item>
+        <item>Química Orgánica</item>
+        <item>Expresión Gráfica</item>
+        <item>Introducción a la Ingeniería</item>
+        <item>Formación Complementaria</item>
+        <item>Física Mecánica</item>
+        <item>Física de Campos</item>
+        <item>Física de Ondas</item>
+        <item>Fundamentos de Programación</item>
+        <item>Economía General</item>
+        <item>Contabilidad y Finanzas</item>
+        <item>Formulación y Evaluación de Proyectos</item>
+        <item>Administración General</item>
+        <item>Biología</item>
     </string-array>
 
-    <string-array name="mSistemas">
-        <item>Estructuras de datos</item>
-        <item>Sistemas discretos</item>
-        <item>Arquitectura de hardware</item>
+    <string-array name="mAdministrativa">
+
+        Gestión de la Cadena de Abastecimiento
+        Administración Pública
+        Gestión Humana
+        Gerencia Estratégica
+        Gerencia Estratégica
+        Innovación y Gestión de la Tecnología
+        Gerencia de Procesos
+        Gestión de Negocios Tecnológicos
+        Gerencia de proyectos
+        Emprendimiento
+        Fundamentos de Mercadeo
+        Distribución Local e Internacional
+        Comportamiento del Consumidor
+        Negociación y Ventas
+        Negocios Internacionales
+        Mercadeo internacional
+        Negocios Electrónicos
+        Gerencia de Marca
     </string-array>
+
+    <string-array name="mAmbiental">
+        <item>Calidad y Tratamiento del Aire</item>
+        <item>Calidad y Tratamiento de Aguas</item>
+        <item>Gestión ambiental en proyectos de desarrollo</item>
+        <item>Derecho Ambiental</item>
+        <item>Gestión y Valorización de Residuos</item>
+        <item>Gestión ambiental corporativa</item>
+        <item>Energía y Desarrollo</item>
+        <item>Economía Ambiental</item>
+
+    </string-array>
+
+    <string-array name="mBiomedica">
+        Microbiología
+        Ecología
+        Biodiversidad
+        Biología Celular
+        Biología Molecular
+        Morfofisiología I
+        Morfofisiología II
+        Biotecnología Ambiental
+        Ingeniería de Rehabilitación
+        Entorno Hospitalario
+        Gestión de Tecnología en Salud
+        Adquisición y procesamiento de señales
+        Procesamiento digital de señales e imágenes-
+        Biomecánica
+        Modelos y Simulación Biomédica
+        Dispositivos Médicos
+        Metrología Biomédica
+        Bioinformática
+        Biotecnologia en Salud
+        Biomateriales
+
+    </string-array>
+
+    <string-array name="mCivil">
+        Diseño de Elementos de Hormigón
+        Análisis de Estructuras
+        Materiales de Construcción
+        Construcción de Edificaciones
+        Diseño Sismorresistente
+        Construcción de Vías
+        BIM (Modelación de la Gestión de la Construcción)
+        Supervisión técnica en construcción
+        Hidráulica I Civil
+        Hidráulica
+        Mecánica de Fluidos
+        Mecánica de Biofluidos
+        Hidroclimatología
+        Suministro y Disposición de Aguas
+        Gestión del Territorio
+        Tránsito y Transporte
+        Información Georreferenciada
+        Fotointerpretación
+        Topografía
+        Diseño de Vías
+
+    </string-array>
+
+    <string-array name="mFinanciera">
+        Microeconomía
+        Macroeconomía
+        Economía Internacional
+        Contabilidad
+        Costos
+        Administración Financiera
+        Matemática Financiera
+        Finanzas Corporativas
+        Preparación y Evaluación de Proyectos
+        Banca y Mercado de Capitales
+        Renta Fija
+        Renta Variable
+        Introducción a los Riesgos Financieros
+        Econometría
+        Teoría de Portafolios
+        Derivados
+        Riesgo de Mercado
+        Riesgo de Liquidez
+        Riesgo Crédito
+        Riesgo Operativo
+        Finanzas Públicas
+
+    </string-array>
+
+    <string-array name="mGeologica">
+        Ciencia del Suelo
+        Geología
+        Cimentaciones
+        Procesos Geológicos
+        Física y Química Mineral
+        Geología del petróleo
+        Yacimientos
+        Exploración y Explotación de Materiales
+        Petrología ígnea y metamórfica
+        Geología Estructural
+        Petrología sedimentaria
+        Geomorfología
+        Mecánica de Rocas
+        Geología de Colombia
+        Diseño de Pavimentos
+        Gestión Integral del Riesgo
+        Geología Económica
+        Estabilidad de Taludes
+        Física y Mecánica del Suelo
+        Hidrogeología
+        Geología de Campo y Cartografía
+
+    </string-array>
+
+    <string-array name="mIndustrial">
+        Administración de Operaciones
+        Gestión de Operaciones
+        Logística
+        Diseño de Instalaciones
+        Diseño y Desarrollo de Bienes y Servicios
+        Estudio del Trabajo
+        Control Estadístico de Procesos
+        Manufactura Esbelta
+        Factor Humano
+        Cadenas de Abastecimiento Digitales
+        Logística Internacional
+        Teoría de Restricciones
+        Modelos y Simulación
+        Modelos y Simulación Empresarial
+        Modelos y Simulación de Sistemas
+        Modelos y Simulación de Sistemas Mecánicos
+        Modelos y Simulación Numérica
+        Toma de Decisiones
+        Procesos Estocásticos
+        Modelos y Simulación Financiera
+
+    </string-array>
+
+    <string-array name="mMecanica">
+        Ciencia de los Materiales
+        Deformación y Remoción de material
+        Unión y Solidificación de Materiales
+        Diseño Asistido por Computador
+        Procesos de Transformación Industrial
+        Mecánica y Procesos de Transformación
+        Mecánica de Materiales
+        Diseño Mecánico
+        Diseño de Mecanismos
+        Diseño de Elementos de Máquinas
+        Sistemas Mecánicos
+        Gestión del Mantenimiento Industrial
+        Dibujo de Elementos de Máquinas
+        Elementos de Máquinas
+        Termodinámica y Mecánica de Fluidos
+        Termodinámica
+        Transferencia de Calor
+        Procesos y Sistemas Térmicos
+        Diseño de Sistemas Térmicos
+        Máquinas Térmicas
+        Energías Alternativas
+        Motores de Combustión Interna
+
+    </string-array>
+
+    <string-array name="mMecatronica">
+        Control Digital
+        Oleoneumática Industrial
+        Robótica Industrial
+        Diseño Mecatrónico
+        Instrumentación y Automatización Industrial
+        Comunicaciones y Redes Industriales
+        Control Análogo
+        Control I. Mecánica
+        Automatización
+        Biomecatrónica
+        Instrumentación y Redes Industriales
+        Automatización de Procesos
+        Internet de las cosas
+        Visión Artificial
+        Electrónica Digital y Microcontroladores
+        Electrónica Análoga y de Potencia
+        Circuitos Eléctricos y Máquinas
+        Electricidad y Electrónica
+        Señales y Sistemas
+        Sistemas Embebidos
+
+    </string-array>
+
+
+    <string-array name="mSistemas">
+        Bases de Datos Empresariales
+        Bases de Datos
+        Inteligencia Artificial
+        Programación
+        Análisis de Decisiones
+        Inteligencia de Negocios
+        Sistemas Inteligentes
+        Lenguajes y Compiladores
+        Estructuras de Datos
+        Computación Gráfica
+        Computación Científica
+        Arquitectura de Hardware
+        Implementación e Integración de Software
+        Requisitos y Modelos
+        Sistemas Operativos
+        Diseño de Redes
+        Administración de Redes
+        Seguridad de la información
+        Análisis y Diseño de Software
+        Sistemas Discretos
+        Ingeniería Web
+        Computación Distribuida y en la nube
+        Ciberseguridad y Ciberdefensa
+        Optativa SC
+
+    </string-array>
+
+
     <string name="title_activity_study">StudyActivity</string>
 
 

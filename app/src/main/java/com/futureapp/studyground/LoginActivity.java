@@ -31,8 +31,8 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth auth;
     DatabaseReference db;
 
-    private String email = "v";
-    private String pwd = "v";
+    private String email = "";
+    private String pwd = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
