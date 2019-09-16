@@ -16,6 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -126,7 +127,7 @@ public class SinginActivity extends AppCompatActivity {
                   String[] materiasp=EleccionPrograma(programa);
 
 
-                  List allMaterias=new ArrayList();
+                  ArrayList<String> allMaterias = new ArrayList<String>();
 
 
                   for (int i=0;i<materias.length;i++){
@@ -142,6 +143,10 @@ public class SinginActivity extends AppCompatActivity {
                   for (int i=0;i<allMaterias.size();i++){
                       System.out.println(i+"programa materias cb:"+allMaterias.get(i).toString());
                   }
+
+                  Intent intent = new Intent(SinginActivity.this, ElectMateriasActivity.class);
+                  intent.putStringArrayListExtra("materias", allMaterias);
+                  startActivity(intent);
 
               }
           }
